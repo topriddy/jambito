@@ -17,6 +17,7 @@ public class JambitoApplication extends WebApplication {
 		// BasicConfigurator.configure();
 		getResourceSettings().setResourcePollFrequency(null);
 		mountPackage("p", BasePage.class);
+		mountPage("home", HomePage.class);
 		initWithTestData();
 	}
 
