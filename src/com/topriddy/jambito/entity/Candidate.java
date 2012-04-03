@@ -17,7 +17,6 @@ public class Candidate implements Serializable{
     private String examinationCenter;
     private String phoneNumber;
     private String email;
-    private String fileName;
     
     List<Course> courses;
     List<Institution> institutions;

@@ -22,7 +22,8 @@ import com.topriddy.jambito.exception.ExceededLimitException;
 public class ResultEngine {
 	private final String JAMB_URL = "http://www.jamb.org.ng/Unifiedtme/";
 
-	public Candidate checkResult(String pinCode){
+	
+	public Candidate checkResult(String pinCode) {
 		Candidate candidate = null;
 		try {
 
@@ -45,16 +46,16 @@ public class ResultEngine {
 			log.severe(ex.getMessage());
 			ex.printStackTrace();
 		}
-		
+
 		return candidate;
 	}
 
 	private Candidate extractCandidate(HtmlPage resultPage) {
 		Candidate candidate = null;
 		try {
-			if(resultPage.getElementById("txtRegNumber") == null){
-                return null;
-            }
+			if (resultPage.getElementById("txtRegNumber") == null) {
+				return null;
+			}
 			String registrationNumber = resultPage
 					.getElementById("txtRegNumber").asText().trim();
 			if (registrationNumber == null || registrationNumber.equals("")) {
@@ -208,5 +209,93 @@ public class ResultEngine {
 			log.severe(ex.getMessage());
 		}
 		return course;
+	}
+	
+	public Candidate getDefaultCandidate() {
+		Candidate candidate = new Candidate();
+
+		String candidateName = "";
+		String gender = "";
+		String stateOfOrigin = "";
+		String localGovernment = "";
+		String registrationNumber = "";
+		String examinationNumber = "";
+		String examinationCenter = "";
+		String phoneNumber = "";
+		String email = "";
+		String fileName = "";
+		List<Course> courseList = getDefaultCourseList();
+		List<Institution> institutionList = getDefaultInstitutionList();
+		
+		candidate.setCandidateName(candidateName);
+		candidate.setRegistrationNumber(registrationNumber);
+		return null;
+	}
+	
+	public List<Course> getDefaultCourseList(){
+		List<Course> courseList = new ArrayList<Course>();
+		
+		Course course1 = new Course();
+		course1.setCourseTitle("");
+		course1.setScores(0);
+		courseList.add(course1);
+		
+		Course course2 = new Course();
+		course2.setCourseTitle("");
+		course2.setScores(0);
+		courseList.add(course2);
+		
+		Course course3 = new Course();
+		course3.setCourseTitle("");
+		course3.setScores(0);
+		courseList.add(course3);
+		
+		Course course4 = new Course();
+		course4.setCourseTitle("");
+		course4.setScores(0);
+		courseList.add(course4);
+		
+		return courseList;
+	}
+	
+	public List<Institution> getDefaultInstitutionList(){
+		List<Institution> institutionList = new ArrayList<Institution>();
+		
+		Institution institution1 = new Institution();
+		institution1.setName("");
+		institution1.setType("");
+		institution1.setFaculty("");
+		institution1.setChoice("");
+		institution1.setCourse("");
+		institution1.setDescription("");
+		institutionList.add(institution1);
+		
+		Institution institution2 = new Institution();
+		institution2.setName("");
+		institution2.setType("");
+		institution2.setFaculty("");
+		institution2.setChoice("");
+		institution2.setCourse("");
+		institution2.setDescription("");
+		institutionList.add(institution2);
+		
+		Institution institution3 = new Institution();
+		institution3.setName("");
+		institution3.setType("");
+		institution3.setFaculty("");
+		institution3.setChoice("");
+		institution3.setCourse("");
+		institution3.setDescription("");
+		institutionList.add(institution3);
+		
+		Institution institution4 = new Institution();
+		institution4.setName("");
+		institution4.setType("");
+		institution4.setFaculty("");
+		institution4.setChoice("");
+		institution4.setCourse("");
+		institution4.setDescription("");
+		institutionList.add(institution4);
+		return institutionList;
 	}
 }
