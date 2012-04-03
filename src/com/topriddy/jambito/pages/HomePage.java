@@ -40,7 +40,7 @@ public final class HomePage extends BasePage {
 			if (candidate != null) {
 				setResponsePage(new ResultPage(candidate));
 			} else {
-				HomePageForm.this.error("Candidate Not Found");
+				HomePageForm.this.error("Error checking candidate result");
 			}
 		}
 	}

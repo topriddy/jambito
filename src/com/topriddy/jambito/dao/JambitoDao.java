@@ -11,7 +11,8 @@ public class JambitoDao extends DAOBase {
 
 	public boolean createCandidate(Candidate candidate) {
 		boolean success = false;
-		if (candidate != null) {
+		if (candidate != null && findCandidateByRegistrationNumber(candidate.getRegistrationNumber()) == null) {
+			candidate.setRegistrationNumber(candidate.getRegistrationNumber().toUpperCase());
 			ofy().put(candidate);
 			success = true;
 		}
@@ -20,7 +21,7 @@ public class JambitoDao extends DAOBase {
 
 	public Candidate findCandidateByRegistrationNumber(String registrationNumber) {
 		Candidate candidate = ofy().query(Candidate.class)
-				.filter("registrationNumber", registrationNumber).get();
+				.filter("registrationNumber", registrationNumber.toUpperCase()).get();
 		return candidate;
 	}
 }
