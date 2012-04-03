@@ -1,67 +1,27 @@
-body{
-    margin: auto;
-    width: 960px;
+#container{
+	width: 320px;
+	margin:auto;
 }
-#main{
-    padding-top: 10px;
-    padding-bottom: 10px;
+h1{
+	font-size: 3em;
+	color: blue;
+	text-align: center;
 }
-#headerImage{
-    background-image: url('../images/airtel_header.png');
-    width:100%;
-    height: 82px;
-    background-repeat: no-repeat;
-    /*    -moz-background-size: contain;*/
-}
-
 h2{
-    color:#E41721;
+	font-size: 2em;
+	color: blue;
+	text-align: center;
+}
+.caption{
+	font-size: .8em;
+	text-align: center;
 }
 
-#footerImage{
-    background-image: url('../images/airtel_footer.png');
-    width:100%;
-    height: 100px;
-    background-repeat: no-repeat;
-    clear:both;
+#main{
+	margin:10px;
+	padding: 5px;
 }
 
-ul.nav-menu { 
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.form{
+	text-align: center;
 }
-
-.nav-menu li
-{
-    float: left;
-    margin: 0 .3em;
-}
-.contents{
-    clear: both;
-    padding: 10px;
-}
-.autorenewal,.secondaryMenu{
-    float:right;
-}
-.rightAlign{
-    float:right;
-}
-.plan li{
-    list-style-image: url('../images/left_menu_bullet.png');
-    padding: .2em;
-}
-.plan h3{
-    color: #F0686F;
-}
-.buyButton{
-    background-image: url('../images/buynow.png');
-    width:75px;
-    height: 29px; 
-    cursor: pointer;
-    display: block;
-}
-/*.nav-menu
-{
-    width:5em;
-}*/

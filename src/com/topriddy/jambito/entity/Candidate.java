@@ -3,10 +3,14 @@ package com.topriddy.jambito.entity;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.Embedded;
+import javax.persistence.Id;
+
 import lombok.Data;
 
 @Data
 public class Candidate implements Serializable{
+    @Id
     private Long id;
     private String candidateName;
     private String gender;
@@ -18,7 +22,9 @@ public class Candidate implements Serializable{
     private String phoneNumber;
     private String email;
     
+    @Embedded
     List<Course> courses;
+    @Embedded
     List<Institution> institutions;
 
     public int getTotalScores() {

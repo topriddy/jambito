@@ -8,7 +8,30 @@
 	<wicket:extend>
 		<h2>Result Page</h2>
 		<div>
-			The Total Score for Candidate: <span wicket:id="name"></span> is <span wicket:id="scores"></span>
+			<p>
+				<strong>Candidate Name </strong>: <span wicket:id="candidateName">[insert
+					name here]</span>
+			</p>
+			<p>
+				<strong>Total Scores Obtained </strong>: <span
+					wicket:id="totalScore">[insert name here]</span>
+			</p>
+			<table>
+				<thead>
+					<tr>
+						<th>S/N</th>
+						<th>Course Title</th>
+						<th>Score</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr wicket:id="courseListView">
+						<td wicket:id="snos">[generated serial nos is inserted here]</td>
+						<td wicket:id="courseTitle">[course title inserted here]</td>
+						<td wicket:id="courseScore">[course score inserted here]</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 	</wicket:extend>
 </body>

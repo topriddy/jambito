@@ -13,6 +13,7 @@ import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlSubmitInput;
 import com.gargoylesoftware.htmlunit.html.HtmlTextInput;
+import com.topriddy.jambito.dao.JambitoDao;
 import com.topriddy.jambito.entity.Candidate;
 import com.topriddy.jambito.entity.Course;
 import com.topriddy.jambito.entity.Institution;
@@ -21,12 +22,15 @@ import com.topriddy.jambito.exception.ExceededLimitException;
 @Log
 public class ResultEngine {
 	private final String JAMB_URL = "http://www.jamb.org.ng/Unifiedtme/";
+	JambitoDao dao = new JambitoDao();
 
-	
-	public Candidate checkResult(String pinCode) {
+	public Candidate checkResult(String registrationNumber) {
 		Candidate candidate = null;
+		candidate = dao.findCandidateByRegistrationNumber(registrationNumber);
+		if (candidate != null)
+			return candidate;
+		
 		try {
-
 			final WebClient client = new WebClient();
 			client.setThrowExceptionOnFailingStatusCode(false);
 			client.setThrowExceptionOnScriptError(false);
@@ -34,8 +38,8 @@ public class ResultEngine {
 			HtmlPage homePage = client.getPage(JAMB_URL);
 
 			HtmlTextInput pinCodeInput = (HtmlTextInput) homePage
-					.getElementById(pinCode);
-			pinCodeInput.setText(pinCode);
+					.getElementById("ctl00_ContentPlaceHolder1_txtPINRegNumber");
+			pinCodeInput.setText(registrationNumber);
 
 			HtmlSubmitInput checkResultButton = (HtmlSubmitInput) homePage
 					.getElementById("ctl00_ContentPlaceHolder1_btnCheckResult");
@@ -46,7 +50,10 @@ public class ResultEngine {
 			log.severe(ex.getMessage());
 			ex.printStackTrace();
 		}
-
+		
+		if(candidate != null)
+			dao.createCandidate(candidate);
+		
 		return candidate;
 	}
 
@@ -210,75 +217,84 @@ public class ResultEngine {
 		}
 		return course;
 	}
-	
+
 	public Candidate getDefaultCandidate() {
 		Candidate candidate = new Candidate();
 
-		String candidateName = "";
-		String gender = "";
-		String stateOfOrigin = "";
-		String localGovernment = "";
-		String registrationNumber = "";
-		String examinationNumber = "";
-		String examinationCenter = "";
-		String phoneNumber = "";
-		String email = "";
-		String fileName = "";
-		List<Course> courseList = getDefaultCourseList();
-		List<Institution> institutionList = getDefaultInstitutionList();
-		
-		candidate.setCandidateName(candidateName);
+		String candidateName = "CIROMA ADEOLA";
+		String registrationNumber = "7373744888AE";
+		String examinationNumber = "C573733";
+		String examinationCenter = "FESTAC";
+		String gender = "MALE";
+		String stateOfOrigin = "LAGOS";
+		String localGovernment = "LAGOS ISLAND";
+		String phoneNumber = "08056725432";
+		String email = "cadeola@gmail.com";
+		List<Course> courses = getDefaultCourseList();
+		List<Institution> institutions = getDefaultInstitutionList();
+
 		candidate.setRegistrationNumber(registrationNumber);
-		return null;
+		candidate.setCandidateName(candidateName);
+		candidate.setExaminationNumber(examinationNumber);
+		candidate.setExaminationCenter(examinationCenter);
+		candidate.setGender(gender);
+		candidate.setStateOfOrigin(stateOfOrigin);
+		candidate.setLocalGovernment(localGovernment);
+		candidate.setPhoneNumber(phoneNumber);
+		candidate.setEmail(email);
+		candidate.setCourses(courses);
+		candidate.setInstitutions(institutions);
+
+		return candidate;
 	}
-	
-	public List<Course> getDefaultCourseList(){
+
+	public List<Course> getDefaultCourseList() {
 		List<Course> courseList = new ArrayList<Course>();
-		
+
 		Course course1 = new Course();
-		course1.setCourseTitle("");
-		course1.setScores(0);
+		course1.setCourseTitle("Mathematics");
+		course1.setScores(80);
 		courseList.add(course1);
-		
+
 		Course course2 = new Course();
-		course2.setCourseTitle("");
-		course2.setScores(0);
+		course2.setCourseTitle("Use of English");
+		course2.setScores(65);
 		courseList.add(course2);
-		
+
 		Course course3 = new Course();
-		course3.setCourseTitle("");
-		course3.setScores(0);
+		course3.setCourseTitle("Physics");
+		course3.setScores(56);
 		courseList.add(course3);
-		
+
 		Course course4 = new Course();
-		course4.setCourseTitle("");
-		course4.setScores(0);
+		course4.setCourseTitle("Chemistry");
+		course4.setScores(60);
 		courseList.add(course4);
-		
+
 		return courseList;
 	}
-	
-	public List<Institution> getDefaultInstitutionList(){
+
+	public List<Institution> getDefaultInstitutionList() {
 		List<Institution> institutionList = new ArrayList<Institution>();
-		
+
 		Institution institution1 = new Institution();
-		institution1.setName("");
-		institution1.setType("");
-		institution1.setFaculty("");
-		institution1.setChoice("");
-		institution1.setCourse("");
-		institution1.setDescription("");
+		institution1.setName("Federal University of Technology, Akure");
+		institution1.setType("University");
+		institution1.setFaculty("Sciences");
+		institution1.setChoice("First Choice");
+		institution1.setCourse("Computer Science");
+		institution1.setDescription("foo");
 		institutionList.add(institution1);
-		
+
 		Institution institution2 = new Institution();
-		institution2.setName("");
-		institution2.setType("");
-		institution2.setFaculty("");
-		institution2.setChoice("");
+		institution2.setName("University of Ibadan");
+		institution2.setType("University");
+		institution2.setFaculty("Sciences");
+		institution2.setChoice("Second Choice");
 		institution2.setCourse("");
 		institution2.setDescription("");
 		institutionList.add(institution2);
-		
+
 		Institution institution3 = new Institution();
 		institution3.setName("");
 		institution3.setType("");
@@ -287,7 +303,7 @@ public class ResultEngine {
 		institution3.setCourse("");
 		institution3.setDescription("");
 		institutionList.add(institution3);
-		
+
 		Institution institution4 = new Institution();
 		institution4.setName("");
 		institution4.setType("");
