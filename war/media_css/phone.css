@@ -1,0 +1,153 @@
+html,  div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,  abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, table, caption, tbody,body, tfoot, thead, tr, th, td {
+border:0 none;
+margin:0;
+padding:0;
+color:black;
+font-family:Tahoma, Geneva, sans-serif;
+font-size:11px;
+
+}
+
+body{
+	background-image:url(../images/bg.png);
+	background-repeat:repeat-x;}
+
+#container{
+	width:320px;
+	height:400px;
+	margin:0px auto;
+}
+
+#header{
+	width:320px;
+	margin:0px auto;
+	margin-top:10px;
+	height:140px;
+	background-image:url(../images/logo_phone.png);
+	background-repeat:no-repeat;
+}
+
+#search{
+	width:250px;
+	margin:0px auto;
+	height:65px;
+	border-radius:8px;
+	background-image:url(../images/bg-search-home.png);
+	background-repeat:repeat-x;
+	padding:15px;
+}
+
+.input{
+	width:140px;
+	height:40px;
+	font-size:20px;
+	color:#333;
+	padding-left:5px;
+}
+
+#input{
+	width:160px;
+	height:40px;
+	float:left;
+	margin-left:0px;
+	}
+
+#submit{
+	width:90px;
+	height:40px;
+	float:left;
+}
+.submit{
+	width:90px;
+	height:40px;
+	font-size:10px;
+	border:0px solid none;
+	font-weight:bold;
+	background-image:url(../images/bg-button-home.png);
+	border-radius:2px;
+}
+
+#main{
+	border:1px solid #999;
+	margin-top:10px;
+	height:150px;
+	padding-top:30px;
+	width:320px;	
+	}
+	
+	#main_result{
+	margin-top:10px;
+	height:180px;
+	padding-top:10px;
+	border:1px solid #999;	
+	}
+#hd_text{
+	width:200px;
+	height:15px;
+	margin-left:0px;
+	font-weight:bold;
+}
+
+#result_text{ width:200px;
+height:15px;
+font-weight:bold;
+
+}
+
+#small_txt{
+	width:210px;
+	margin-left:100px;
+	height:50px;
+	padding-left:10px;
+	font-size:12px;
+	left: 26px;
+	top: 60px;
+	}
+
+#result{width:320px;
+	margin:0px auto;
+	height:150px;
+	}
+
+	
+#search-input{
+	width:300px;
+	;}
+
+#footer{
+	margin:0px auto;
+	margin-top:30px;
+	width:320px;
+	}
+#footer_result{
+	margin:0px auto;
+	margin-top:20px;
+	width:635px;	
+	}
+	
+h1{
+	font-size: 3em;
+	color: blue;
+	text-align: center;
+}
+h2{
+	font-size: 1.5em;
+	color: blue;
+	text-align: center;
+}
+.caption{
+	font-size: .8em;
+	text-align: center;
+}
+
+
+.label{
+	font-weight: bold;
+}
+.required{
+	color: red;
+	font-weight: bold;
+}
+.form{
+	text-align: center;
+}
