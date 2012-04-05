@@ -4,6 +4,13 @@ import java.io.Serializable;
 
 import lombok.Data;
 
+/**
+ * Institution.java
+ * Purpose: Represents Institution Embedded Entity 
+ *
+ * @author topriddy
+ * @version 1.0
+ */
 @Data
 public class Institution implements Serializable {
 

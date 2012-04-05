@@ -12,6 +12,14 @@ import org.apache.wicket.model.PropertyModel;
 import com.topriddy.jambito.entity.Candidate;
 import com.topriddy.jambito.util.ResultEngine;
 
+/**
+ * HomePage.java
+ * Purpose: This is the application index page and it provides interface to input
+ * 			registration number to look up candidate UME resuly 
+ *
+ * @author topriddy
+ * @version 1.0
+ */
 @Log
 public final class HomePage extends BasePage {
 	public HomePage() {

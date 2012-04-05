@@ -8,6 +8,13 @@ import javax.persistence.Id;
 
 import lombok.Data;
 
+/**
+ * Candidate.java
+ * Purpose: Represents Candidate Entity 
+ *
+ * @author topriddy
+ * @version 1.0
+ */
 @Data
 public class Candidate implements Serializable{
     @Id

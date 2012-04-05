@@ -11,6 +11,13 @@ import com.topriddy.jambito.pages.BasePage;
 import com.topriddy.jambito.pages.HomePage;
 import com.topriddy.jambito.util.ResultEngine;
 
+/**
+ * JambitoApplication.java
+ * Purpose: Entry Wicket WebApplication 
+ *
+ * @author topriddy
+ * @version 1.0
+ */
 public class JambitoApplication extends WebApplication {
 	protected void init() {
 		super.init();

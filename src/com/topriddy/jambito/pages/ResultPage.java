@@ -8,6 +8,13 @@ import org.apache.wicket.model.Model;
 import com.topriddy.jambito.entity.Candidate;
 import com.topriddy.jambito.entity.Course;
 
+/**
+ * ResultPage.java
+ * Purpose: This page renders Candidate Summarized Results
+ *
+ * @author topriddy
+ * @version 1.0
+ */
 public class ResultPage extends BasePage{
 	public ResultPage(Candidate candidate){
 		add(new Label("candidateName", Model.of(candidate.getCandidateName())));

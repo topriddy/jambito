@@ -19,6 +19,13 @@ import com.topriddy.jambito.entity.Course;
 import com.topriddy.jambito.entity.Institution;
 import com.topriddy.jambito.exception.ExceededLimitException;
 
+/**
+ * ResultEngine.java
+ * Purpose: contains logic for retrieving result from jamb site 
+ *
+ * @author topriddy
+ * @version 1.0
+ */
 @Log
 public class ResultEngine {
 	private final String JAMB_URL = "http://www.jamb.org.ng/Unifiedtme/";

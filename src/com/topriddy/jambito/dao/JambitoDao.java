@@ -4,6 +4,13 @@ import com.googlecode.objectify.ObjectifyService;
 import com.googlecode.objectify.util.DAOBase;
 import com.topriddy.jambito.entity.Candidate;
 
+/**
+ * JambitoDao.java
+ * Purpose: Persistence Data Access Object 
+ *
+ * @author topriddy
+ * @version 1.0
+ */
 public class JambitoDao extends DAOBase {
 	static {
 		ObjectifyService.register(Candidate.class);
