@@ -10,7 +10,8 @@ font-size:11px;
 
 body{
 	background-image:url(../images/bg.png);
-	background-repeat:repeat-x;}
+	background-repeat:repeat-x;
+}
 
 #container{
 	width:750px;
@@ -142,4 +143,13 @@ h2{
 }
 .form{
 	text-align: center;
+}
+
+.egRegNos{
+color: red;
+	clear: both;
+	display:block;
+	text-align: center;
+	padding-top: 0;
+	margin:auto 0;	
 }
