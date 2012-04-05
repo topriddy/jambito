@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/slf4j-api-1.5.11.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/slf4j-log4j12-1.5.11.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/wicket-auth-roles-1.5.4.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/wicket-core-1.5.4.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/wicket-datetime-1.5.4.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/wicket-devutils-1.5.4.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/wicket-extensions-1.5.4.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/wicket-guice-1.5.4.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/wicket-ioc-1.5.4.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/wicket-objectsizeof-agent-1.5.4.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/wicket-request-1.5.4.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/wicket-util-1.5.4.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/wicketstuff-gae-initializer-1.5.3.jar"/>
+	<classpathentry kind="lib" path="C:/mylibs/lombok.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-codec-1.4.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-io-1.4.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-lang-2.4.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/cssparser-0.9.5.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/gson-1.6.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/htmlunit-2.8.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/htmlunit-core-js-2.8.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/httpclient-4.0.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/httpcore-4.0.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/httpmime-4.0.1.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/nekohtml-1.9.14.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/objectify-3.0.jar"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

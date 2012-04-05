@@ -6,16 +6,19 @@
 </head>
 <body>
 	<wicket:extend>
-		<form wicket:id="form">
-			<span wicket:id="feedback"> </span>
-			<p>
-				<label for="pinCode">
-					Registration Number <span class="required"> * </span>:</label> 
-					<input type="text"
-					id="pinCode" wicket:id="pinCode" />
-			</p>
-			<input type="submit" value="Check Result"></input>
-		</form>
+		<div id="search">
+			<div id="hd_text">REGISTRATION NUMBER</div>
+			<form wicket:id="form" id="form1" method="post" action="">
+				<span wicket:id="feedback"></span>
+				<div id="input">
+					<input type="text" id="pinCode" wicket:id="pinCode" value=""
+						name="pinCode" class="input" />
+				</div>
+				<div id="submit">
+					<input type="submit" value="CHECK RESULT" class="submit"></input>
+				</div>
+			</form>
+		</div>
 	</wicket:extend>
 </body>
 </html>

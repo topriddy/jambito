@@ -6,17 +6,17 @@
 </head>
 <body>
 	<wicket:extend>
-		<a href="home">Check another result</a>
-		<h2>Result Page</h2>
-		<div>
+		<div id="result">
+			<div id="result_text">Result Page</div>
 			<p>
-				<strong>Candidate Name </strong>: <span wicket:id="candidateName">[insert
-					name here]</span>
+				<strong>Candidate Name </strong>: <span wicket:id="candidateName">[candidate
+					name inserted here]</span>
 			</p>
 			<p>
 				<strong>Total Scores Obtained </strong>: <span
-					wicket:id="totalScore">[insert name here]</span>
+					wicket:id="totalScore">[candidate score inserted here]</span>
 			</p>
+			<p>&nbsp;</p>
 			<table>
 				<thead>
 					<tr>
@@ -27,15 +27,14 @@
 				</thead>
 				<tbody>
 					<tr wicket:id="courseListView">
-						<td wicket:id="snos">[generated serial nos is inserted here]</td>
-						<td wicket:id="courseTitle">[course title inserted here]</td>
-						<td wicket:id="courseScore">[course score inserted here]</td>
+						<td wicket:id="snos">1</td>
+						<td wicket:id="courseTitle">Use of English</td>
+						<td wicket:id="courseScore">55</td>
 					</tr>
 				</tbody>
 			</table>
+			<a href="home">Check another result</a>
 		</div>
-
-		<a href="home">Check another result</a>
 	</wicket:extend>
 </body>
 </html>
