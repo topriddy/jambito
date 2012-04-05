@@ -11,6 +11,7 @@ public class JambitoDao extends DAOBase {
 
 	public boolean createCandidate(Candidate candidate) {
 		boolean success = false;
+		//check needed cos user might have used a different search term
 		if (candidate != null && findCandidateByRegistrationNumber(candidate.getRegistrationNumber()) == null) {
 			candidate.setRegistrationNumber(candidate.getRegistrationNumber().toUpperCase());
 			ofy().put(candidate);

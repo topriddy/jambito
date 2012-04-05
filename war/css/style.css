@@ -2,6 +2,10 @@
 	width: 320px;
 	margin:auto;
 }
+#footer{
+	border-top: 1px black solid;
+	margin-top: 1px;
+}
 h1{
 	font-size: 3em;
 	color: blue;
@@ -18,10 +22,17 @@ h2{
 }
 
 #main{
-	margin:10px;
-	padding: 5px;
+	margin:2px;
+	margin-top:0px;
+	padding:5px;
 }
-
-.form{
+label{
+	font-weight: bold;
+}
+.required{
+	color: red;
+	font-weight: bold;
+}
+form{
 	text-align: center;
 }
