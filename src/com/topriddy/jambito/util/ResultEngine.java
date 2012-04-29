@@ -32,6 +32,10 @@ public class ResultEngine {
 	JambitoDao dao = new JambitoDao();
 
 	public Candidate checkResult(String registrationNumber) {
+		if(registrationNumber == null || registrationNumber.trim().equals("")){
+			return null;
+		}
+		
 		Candidate candidate = null;
 		candidate = dao.findCandidateByRegistrationNumber(registrationNumber);
 		if (candidate != null)

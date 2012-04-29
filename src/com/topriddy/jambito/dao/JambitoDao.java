@@ -28,6 +28,9 @@ public class JambitoDao extends DAOBase {
 	}
 
 	public Candidate findCandidateByRegistrationNumber(String registrationNumber) {
+		if(registrationNumber == null){
+			return null;
+		}
 		Candidate candidate = ofy().query(Candidate.class)
 				.filter("registrationNumber", registrationNumber.toUpperCase()).get();
 		return candidate;

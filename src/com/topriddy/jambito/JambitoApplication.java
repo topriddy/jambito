@@ -26,6 +26,7 @@ public class JambitoApplication extends WebApplication {
 		mountPackage("p", BasePage.class);
 		mountPage("home", HomePage.class);
 		initWithTestData();
+
 	}
 
 	/**
